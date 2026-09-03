@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKU Field Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <h1>VKU Field Survey</h1>
+            <p class="subtitle">Khảo sát cơ sở vật chất VKU</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard -->
+        <section class="dashboard">
+            <div class="stat-card">
+                <div class="stat-title">Tổng số</div>
+                <div class="stat-value" id="total-count">0</div>
+            </div>
+            <div class="stat-card success">
+                <div class="stat-title">Đã hoàn thành</div>
+                <div class="stat-value" id="completed-count">0</div>
+            </div>
+            <div class="stat-card warning">
+                <div class="stat-title">Chưa hoàn thành</div>
+                <div class="stat-value" id="pending-count">0</div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <h2>Thêm khảo sát mới</h2>
+                <form id="survey-form">
+                    <div class="form-group">
+                        <label for="fullName">Họ và tên <span class="required">*</span></label>
+                        <input type="text" id="fullName" placeholder="Nhập họ và tên của bạn">
+                        <span class="error-message" id="error-fullName">Vui lòng nhập họ tên</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Khu vực khảo sát <span class="required">*</span></label>
+                        <select id="area">
+                            <option value="">-- Chọn khu vực --</option>
+                            <option value="Tòa nhà A">Tòa nhà A</option>
+                            <option value="Tòa nhà B">Tòa nhà B</option>
+                            <option value="Thư viện">Thư viện</option>
+                            <option value="Phòng học">Phòng học</option>
+                            <option value="Phòng máy">Phòng máy</option>
+                            <option value="Khuôn viên">Khuôn viên</option>
+                            <option value="Nhà xe">Nhà xe</option>
+                            <option value="Khu vực khác">Khu vực khác</option>
+                        </select>
+                        <span class="error-message" id="error-area">Vui lòng chọn khu vực</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Hạng mục cơ sở vật chất <span class="required">*</span></label>
+                        <input type="text" id="category" placeholder="VD: Bàn ghế, Máy chiếu, Điều hòa...">
+                        <span class="error-message" id="error-category">Vui lòng nhập hạng mục</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Mức độ đánh giá <span class="required">*</span></label>
+                        <select id="rating">
+                            <option value="">-- Chọn mức độ --</option>
+                            <option value="Rất tốt">Rất tốt</option>
+                            <option value="Tốt">Tốt</option>
+                            <option value="Trung bình">Trung bình</option>
+                            <option value="Kém">Kém</option>
+                            <option value="Rất kém">Rất kém</option>
+                        </select>
+                        <span class="error-message" id="error-rating">Vui lòng chọn mức độ đánh giá</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Nội dung nhận xét <span class="required">*</span></label>
+                        <textarea id="comment" rows="3" placeholder="Nhập nhận xét chi tiết..."></textarea>
+                        <span class="error-message" id="error-comment">Vui lòng nhập nhận xét</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Gửi khảo sát</button>
+                    <div id="success-message" class="success-message hidden">Gửi khảo sát thành công!</div>
+                </form>
+            </section>
+
+            <!-- Survey List Section -->
+            <section class="list-section">
+                <h2>Danh sách khảo sát</h2>
+                <div id="survey-list" class="survey-list">
+                    <!-- Survey cards will be rendered here by JavaScript -->
+                    <div class="empty-state">Chưa có dữ liệu khảo sát.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
