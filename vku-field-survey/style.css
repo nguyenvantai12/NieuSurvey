@@ -305,3 +305,24 @@ input:focus, select:focus, textarea:focus {
 .btn-delete:hover {
     opacity: 0.8;
 }
+
+/* Install Button (A2HS) */
+.btn-install {
+    background-color: #f1f5f9;
+    color: #2563eb;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+.btn-install:hover {
+    background-color: #e2e8f0;
+}
+.hidden {
+    display: none !important;
+}
