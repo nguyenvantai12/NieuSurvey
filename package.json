@@ -1,0 +1,9 @@
+{
+  "name": "vku-field-survey-workspace",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix vku-field-survey run build",
+    "cap:sync": "npm --prefix vku-field-survey run cap:sync",
+    "cap:open": "npm --prefix vku-field-survey exec -- cap open android"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "vku-field-survey",
+  "version": "1.0.0",
+  "description": "Đây là phiên bản **Progressive Web App (PWA) hoàn chỉnh** cho hệ thống khảo sát cơ sở vật chất khuôn viên trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU).",
+  "main": "main.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "cap:sync": "npm run build && cap sync android",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^8.5.1",
+    "@capacitor/camera": "^8.2.4",
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/geolocation": "^8.2.2",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/network": "^8.0.1",
+    "vku-field-survey-workspace": "file:.."
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.1",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3"
+  }
+}
