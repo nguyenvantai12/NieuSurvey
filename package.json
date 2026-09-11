@@ -1,6 +1,9 @@
 {
   "name": "vku-field-survey-workspace",
   "private": true,
+  "workspaces": [
+    "vku-field-survey"
+  ],
   "scripts": {
     "build": "npm --prefix vku-field-survey run build",
     "cap:sync": "npm --prefix vku-field-survey run cap:sync",
